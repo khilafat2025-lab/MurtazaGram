@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/bg_action_bar"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/spacing_md">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_lg"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="@dimen/spacing_sm" />
+
+        <ImageView
+            android:id="@+id/btnSettings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:scrollbars="none"
+        android:background="@color/bg_action_bar">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/spacing_sm">
+            <TextView android:id="@+id/tabAll" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center" android:text="@string/tab_all" android:textColor="@color/text_accent" android:textSize="@dimen/text_md" android:textStyle="bold" android:paddingHorizontal="@dimen/spacing_md" android:background="?android:attr/selectableItemBackground" />
+            <TextView android:id="@+id/tabChats" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center" android:text="@string/tab_chats" android:textColor="@color/text_secondary" android:textSize="@dimen/text_md" android:paddingHorizontal="@dimen/spacing_md" android:background="?android:attr/selectableItemBackground" />
+            <TextView android:id="@+id/tabGroups" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center" android:text="@string/tab_groups" android:textColor="@color/text_secondary" android:textSize="@dimen/text_md" android:paddingHorizontal="@dimen/spacing_md" android:background="?android:attr/selectableItemBackground" />
+            <TextView android:id="@+id/tabChannels" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center" android:text="@string/tab_channels" android:textColor="@color/text_secondary" android:textSize="@dimen/text_md" android:paddingHorizontal="@dimen/spacing_md" android:background="?android:attr/selectableItemBackground" />
+            <TextView android:id="@+id/tabBots" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center" android:text="@string/tab_bots" android:textColor="@color/text_secondary" android:textSize="@dimen/text_md" android:paddingHorizontal="@dimen/spacing_md" android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/rvChats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@color/divider"
+            android:dividerHeight="1dp"
+            android:paddingBottom="@dimen/spacing_sm" />
+        <LinearLayout
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@mipmap/ic_launcher" android:alpha="0.3" android:layout_marginBottom="@dimen/spacing_md" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_chats" android:textColor="@color/text_secondary" android:textSize="@dimen/text_lg" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_chats_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_sm" android:layout_marginTop="@dimen/spacing_xs" />
+        </LinearLayout>
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center" android:indeterminateTint="@color/accent" android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
