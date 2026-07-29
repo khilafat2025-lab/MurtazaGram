@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/spacing_xs">
+
+    <LinearLayout
+        android:id="@+id/bubbleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bubble_in"
+        android:padding="@dimen/spacing_md"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/tvSenderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_accent"
+            android:textSize="@dimen/text_xs"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/tvMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bubble_in_text"
+            android:textSize="@dimen/text_sm"
+            android:autoLink="all" />
+
+        <TextView
+            android:id="@+id/tvTranslatedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_tertiary"
+            android:textSize="@dimen/text_xs"
+            android:textStyle="italic"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_tertiary"
+            android:textSize="@dimen/text_xs"
+            android:layout_marginTop="@dimen/spacing_xs" />
+    </LinearLayout>
+</LinearLayout>
