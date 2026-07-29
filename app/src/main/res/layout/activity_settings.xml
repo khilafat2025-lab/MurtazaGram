@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@color/bg_action_bar"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/spacing_md">
+            <ImageView android:id="@+id/btnBack" android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_media_previous" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_marginEnd="@dimen/spacing_sm" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/settings_title" android:textColor="@color/text_primary" android:textSize="@dimen/text_lg" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_margin="@dimen/spacing_md" android:gravity="center_vertical">
+            <ImageView android:layout_width="@dimen/avatar_md" android:layout_height="@dimen/avatar_md" android:src="@drawable/avatar_placeholder" android:layout_marginEnd="@dimen/spacing_md" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvBotName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MurtazaGram" android:textColor="@color/text_primary" android:textSize="@dimen/text_md" android:textStyle="bold" />
+                <TextView android:id="@+id/tvBotUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Connected via Bot API" android:textColor="@color/text_secondary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Power Features" android:textColor="@color/text_accent" android:textSize="@dimen/text_xs" android:textStyle="bold" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginTop="@dimen/spacing_sm" android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_ghost_mode" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_ghost_mode_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+            <Switch android:id="@+id/swGhostMode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_auto_translate" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_auto_translate_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+            <Switch android:id="@+id/swAutoTranslate" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_anti_delete" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_anti_delete_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+            <Switch android:id="@+id/swAntiDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fast_download" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fast_download_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+            <Switch android:id="@+id/swFastDownload" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_hide_online" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_hide_online_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+            <Switch android:id="@+id/swHideOnline" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_original_quality" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_original_quality_desc" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" />
+            </LinearLayout>
+            <Switch android:id="@+id/swOriginalQuality" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Actions" android:textColor="@color/text_accent" android:textSize="@dimen/text_xs" android:textStyle="bold" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginTop="@dimen/spacing_sm" android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <LinearLayout android:id="@+id/rowMarkAllRead" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/settings_mark_all_read" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" />
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_media_next" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/rowArchiveRead" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/settings_archive_read" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" />
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_media_next" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/rowAbout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_xs" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/settings_about" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" />
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_media_next" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/rowLogout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_lg" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/settings_logout" android:textColor="@color/error" android:textSize="@dimen/text_sm" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_version" android:textColor="@color/text_tertiary" android:textSize="@dimen/text_xs" android:layout_gravity="center" android:layout_marginBottom="@dimen/spacing_lg" />
+    </LinearLayout>
+</ScrollView>
