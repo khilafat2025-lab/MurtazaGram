@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@color/bg_action_bar"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/spacing_md">
+            <ImageView android:id="@+id/btnBack" android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_media_previous" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_marginEnd="@dimen/spacing_sm" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Profile" android:textColor="@color/text_primary" android:textSize="@dimen/text_lg" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/spacing_lg">
+            <ImageView android:layout_width="@dimen/avatar_xl" android:layout_height="@dimen/avatar_xl" android:src="@drawable/avatar_placeholder" android:layout_marginBottom="@dimen/spacing_md" />
+            <TextView android:id="@+id/tvProfileName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="@color/text_primary" android:textSize="@dimen/text_xl" android:textStyle="bold" />
+            <TextView android:id="@+id/tvProfileStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="online" android:textColor="@color/text_secondary" android:textSize="@dimen/text_sm" android:layout_marginTop="@dimen/spacing_xs" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/rowUserId" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_sm" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_user_id" android:textColor="@color/text_secondary" android:textSize="@dimen/text_sm" />
+            <TextView android:id="@+id/tvUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:layout_marginEnd="@dimen/spacing_sm" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_copy" android:textColor="@color/text_accent" android:textSize="@dimen/text_xs" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/rowUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_sm" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_username" android:textColor="@color/text_secondary" android:textSize="@dimen/text_sm" />
+            <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:layout_marginEnd="@dimen/spacing_sm" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_copy" android:textColor="@color/text_accent" android:textSize="@dimen/text_xs" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/rowPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_sm" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_phone" android:textColor="@color/text_secondary" android:textSize="@dimen/text_sm" />
+            <TextView android:id="@+id/tvPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" android:layout_marginEnd="@dimen/spacing_sm" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_copy" android:textColor="@color/text_accent" android:textSize="@dimen/text_xs" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="@dimen/spacing_md" android:layout_marginHorizontal="@dimen/spacing_md" android:layout_marginBottom="@dimen/spacing_sm" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_join_date" android:textColor="@color/text_secondary" android:textSize="@dimen/text_sm" />
+            <TextView android:id="@+id/tvJoinDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textColor="@color/text_primary" android:textSize="@dimen/text_sm" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
